@@ -14,7 +14,7 @@
 function site_info($row,$value=NULL)
 {
     require_once RC_LIBRARY_PATH . "/language/language_class.php";
-    $raccoon_language = new language();
+    $raccoon_language = new raccoon_language();
     require_once RC_LIBRARY_PATH . "/site_info/class_site_info.php";
     $rc_site_info = new site_info($raccoon_language->current_lang());
     return $rc_site_info->$row($value);

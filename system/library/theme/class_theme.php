@@ -15,9 +15,30 @@ class raccoon_theme
 {
     public function __construct() {
         require_once RC_LIBRARY_PATH . "/site_info/class_site_info.php";
-        $rc_site_info = new site_info();
-        $site_theme = $rc_site_info->site_theme();
-        $theme_file =  RC_PUBLIC_PATH . "/view/themes/".$site_theme."/index.php";
-        return require_once $theme_file;
+        $this -> rc_site_info = new site_info();
+        $this -> site_theme = $this -> rc_site_info->site_theme();
+    }
+    
+    public function get_theme()
+    {
+        require_once RC_LIBRARY_PATH . "/language/language_class.php";
+        $raccoon_language = new raccoon_language();
+        $theme_file =  RC_PUBLIC_PATH . "/view/themes/".$this -> site_theme."/index.php";
+        require_once $theme_file;
+    }
+    
+    public function get_theme_head()
+    {
+        
+    }
+    
+    public function get_theme_after_head()
+    {
+        
+    }
+    
+    public function get_theme_before_body()
+    {
+        
     }
 }

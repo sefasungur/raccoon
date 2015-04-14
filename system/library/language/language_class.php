@@ -11,10 +11,10 @@
  * @licence https://www.gnu.org/licenses/gpl-2.0.html
  */
 
-class language{
+class raccoon_language{
     public function __construct() {
-        $raccoon_languge = $_SESSION["raccoon_lang"];
-        return $raccoon_languge;
+        $raccoon_lang = $_SESSION["raccoon_lang"];
+        return $raccoon_lang;
     }
     
     // Language Select Function

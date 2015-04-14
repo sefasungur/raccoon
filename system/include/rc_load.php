@@ -20,9 +20,10 @@ require_once RC_LIBRARY_PATH . "/mysqli/MysqliDb.php";
 $raccoon_mysqli = new MysqliDb(DB_HOST,DB_USER,DB_PASS,DB_NAME);
 
 require_once RC_LIBRARY_PATH . "/language/language_class.php";
-$raccoon_language = new language();
+$raccoon_language = new raccoon_language();
 
 require_once RC_LIBRARY_PATH . "/site_info/function_site_info.php";
 
 require_once RC_LIBRARY_PATH . "/theme/class_theme.php";
 $raccoon_theme = new raccoon_theme;
+$raccoon_theme -> get_theme();

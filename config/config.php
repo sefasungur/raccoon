@@ -12,16 +12,16 @@
  */
 
 /* Database Settings */
-define ("DB_HOST","");  // Usually localhost
-define ("DB_USER","");  // Our Database Username
-define ("DB_NAME","");  // Our Database Name
+define ("DB_HOST","localhost");  // Usually localhost
+define ("DB_USER","root");  // Our Database Username
+define ("DB_NAME","raccoon");  // Our Database Name
 define ("DB_PASS","");  // Our Database Password
 define ("DB_PREF","");  // Our Database Prefix
 
 /* Timezone Setting */
-define ("DB_TIME","");  // Our location time zone. "Europe/Istanbul" etc. Please browse, http://php.net/manual/en/timezones.php
+define ("RC_TIME","Europe/Istanbul");  // Our location time zone. "Europe/Istanbul" etc. Please browse, http://php.net/manual/en/timezones.php
 
 /* Language Setting */
-define ("DB_LANG","");  // Our website's language. "tr" etc.
+define ("RC_LANG","tr");  // Our website's language. "tr" etc.
 
 ?>

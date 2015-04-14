@@ -11,11 +11,8 @@
  * @licence https://www.gnu.org/licenses/gpl-2.0.html
  */
 
-require_once RC_LIBRARY_PATH . "/language/language_class.php";
-$raccoon_language = new raccoon_language();
 
 function lang_select($lang_code)
 {
-
     $raccoon_language->lang_select($lang_code);
 }

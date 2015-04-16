@@ -150,4 +150,27 @@ class site_info
         }
         return $google_analytic_code;
     }
+    
+    function is_https()
+    {
+        foreach ($this->site_info as $result) { 
+            $https=$result["https"];
+        }
+        return $https;
+    }
+    
+    function site_domain($value=NULL)
+    {
+        if($value!="" or $value!=NULL)
+        {
+            $site_domain = $value;
+        }
+        else
+        {
+            foreach ($this->site_info as $result) { 
+                $site_domain=$result["domain"];
+            }
+        }
+        return $site_domain;
+    }
 }

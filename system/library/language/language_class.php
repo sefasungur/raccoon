@@ -13,7 +13,14 @@
 
 class raccoon_language{
     public function __construct() {
-        $raccoon_lang = $_SESSION["raccoon_lang"];
+        if(isset($_SESSION["raccoon_lang"]))
+        {
+            $raccoon_lang = $_SESSION["raccoon_lang"];
+        }
+        else
+        {
+            $raccoon_lang = RC_LANG;
+        }
         return $raccoon_lang;
     }
     
@@ -43,6 +50,24 @@ class raccoon_language{
         }
         return $current_lang;
     }
+    
+    // Language Select Link
+    public function get_lang_select($lang,$lang_text)
+    {
+        $https = site_info("is_https");
+        if($https == 1)
+        {
+            $link_before = "https://";
+        }
+        else
+        {
+            $link_before = "http://";
+        }
+        
+        $get_link = $link_before.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        echo "<a href='".$link_before.site_info("site_domain")."/system/include/lang_select.php?lang=$lang&url=$get_link'>$lang_text</a>";
+    }
+    
 }
 
 

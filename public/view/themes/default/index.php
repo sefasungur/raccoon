@@ -18,6 +18,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div>default Tema</div>
+<div>
+<?php $raccoon_language-> get_lang_select("en","English"); ?>
+
+<br/>
+<?php $raccoon_language-> get_lang_select("tr","Türkçe"); ?>
+    
+</div>
 </body>
 </html>
